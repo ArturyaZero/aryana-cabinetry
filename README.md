@@ -22,6 +22,6 @@ This is a simple project created to practice web development skills and improve 
 - Beginner-friendly code  
 
 ---
-
+And... It's my first proj!!!
 ## 👤 Author
 ArturyaZero
