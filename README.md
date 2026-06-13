@@ -24,4 +24,4 @@ This is a simple project created to practice web development skills and improve 
 ---
 
 ## 👤 Author
-ArtoriaZero
+ArturyaZero
