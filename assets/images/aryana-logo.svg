@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <!-- Outer ring gradient: dark to medium brown -->
+    <linearGradient id="outerRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C1A0E"/>
+      <stop offset="50%" style="stop-color:#6B3A1F"/>
+      <stop offset="100%" style="stop-color:#2C1A0E"/>
+    </linearGradient>
+
+    <!-- Inner background: warm mid-brown -->
+    <radialGradient id="innerBg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" style="stop-color:#C8894A"/>
+      <stop offset="100%" style="stop-color:#7A4520"/>
+    </radialGradient>
+
+    <!-- Gold shimmer for accents -->
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#D4A843"/>
+      <stop offset="50%" style="stop-color:#F0C96A"/>
+      <stop offset="100%" style="stop-color:#D4A843"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#1a0a02" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Glow for center icon -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer dark ring -->
+  <circle cx="200" cy="200" r="195" fill="url(#outerRing)" filter="url(#shadow)"/>
+
+  <!-- Gold thin outer border -->
+  <circle cx="200" cy="200" r="190" fill="none" stroke="url(#gold)" stroke-width="2"/>
+
+  <!-- Inner warm brown circle -->
+  <circle cx="200" cy="200" r="178" fill="url(#innerBg)"/>
+
+  <!-- Thin gold inner border -->
+  <circle cx="200" cy="200" r="172" fill="none" stroke="url(#gold)" stroke-width="1.5" stroke-dasharray="6 3"/>
+
+  <!-- ══ CABINET ICON — shifted up, centered ══ -->
+  <!-- Cabinet body: top=78, height=100 -->
+  <rect x="145" y="78" width="110" height="100" rx="4" ry="4"
+        fill="#2C1A0E" stroke="url(#gold)" stroke-width="2" filter="url(#glow)"/>
+
+  <!-- Cabinet top panel line -->
+  <line x1="145" y1="96" x2="255" y2="96" stroke="url(#gold)" stroke-width="1.5"/>
+
+  <!-- Left door -->
+  <rect x="151" y="101" width="47" height="70" rx="2" ry="2"
+        fill="#3D2210" stroke="url(#gold)" stroke-width="1.2"/>
+
+  <!-- Right door -->
+  <rect x="202" y="101" width="47" height="70" rx="2" ry="2"
+        fill="#3D2210" stroke="url(#gold)" stroke-width="1.2"/>
+
+  <!-- Left door panel inset -->
+  <rect x="157" y="107" width="35" height="58" rx="2" ry="2"
+        fill="none" stroke="#D4A84380" stroke-width="1"/>
+
+  <!-- Right door panel inset -->
+  <rect x="208" y="107" width="35" height="58" rx="2" ry="2"
+        fill="none" stroke="#D4A84380" stroke-width="1"/>
+
+  <!-- Left door knob -->
+  <circle cx="198" cy="137" r="3.5" fill="url(#gold)"/>
+
+  <!-- Right door knob -->
+  <circle cx="202" cy="137" r="3.5" fill="url(#gold)"/>
+
+  <!-- Cabinet legs -->
+  <rect x="155" y="178" width="11" height="16" rx="2" fill="#2C1A0E" stroke="url(#gold)" stroke-width="1"/>
+  <rect x="234" y="178" width="11" height="16" rx="2" fill="#2C1A0E" stroke="url(#gold)" stroke-width="1"/>
+
+  <!-- ══ DECORATIVE DIVIDER (below cabinet, above text) ══ -->
+  <!-- y = 78+100+16+14 = 208 for diamond center -->
+  <path d="M115 212 Q158 204 200 207 Q242 210 285 212"
+        fill="none" stroke="url(#gold)" stroke-width="1.5"/>
+  <polygon points="200,202 205,207 200,212 195,207" fill="url(#gold)"/>
+
+  <!-- ══ BRAND NAME ══ -->
+  <!-- ARYANA: baseline at y=242 -->
+  <text x="200" y="244"
+        font-family="'Palatino Linotype', 'Book Antiqua', Palatino, serif"
+        font-size="32"
+        font-weight="700"
+        letter-spacing="6"
+        text-anchor="middle"
+        fill="url(#gold)">ARYANA</text>
+
+  <!-- Thin line under name: y=253 -->
+  <line x1="130" y1="253" x2="270" y2="253" stroke="url(#gold)" stroke-width="0.8" opacity="0.7"/>
+
+  <!-- DECORATION tagline: baseline at y=272 -->
+  <text x="200" y="272"
+        font-family="'Palatino Linotype', 'Book Antiqua', Palatino, serif"
+        font-size="13"
+        font-weight="400"
+        letter-spacing="5"
+        text-anchor="middle"
+        fill="#F0C96A"
+        opacity="0.9">DECORATION</text>
+
+  <!-- Small leaf ornaments flanking tagline -->
+  <path d="M120 268 C124 262 130 264 127 270 C124 266 120 268 120 268Z"
+        fill="url(#gold)" opacity="0.8"/>
+  <path d="M280 268 C276 262 270 264 273 270 C276 266 280 268 280 268Z"
+        fill="url(#gold)" opacity="0.8"/>
+
+  <!-- ══ BOTTOM ARC TEXT — arc sits at r=148 below center ══ -->
+  <!-- Arc path: center 200,200 radius 148, from ~210° to ~330° (bottom arc) -->
+  <path id="bottomArc" d="M 74,274 A 148,148 0 0,0 326,274" fill="none"/>
+  <text font-family="'Palatino Linotype', serif" font-size="11" fill="#D4A843" opacity="0.7" letter-spacing="2">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">
+      ✦ CABINET &amp; INTERIOR WOODWORK ✦
+    </textPath>
+  </text>
+
+  <!-- Outer corner ornaments (4 dots at cardinal points inside ring) -->
+  <circle cx="200" cy="14"  r="3" fill="url(#gold)" opacity="0.6"/>
+  <circle cx="200" cy="386" r="3" fill="url(#gold)" opacity="0.6"/>
+  <circle cx="14"  cy="200" r="3" fill="url(#gold)" opacity="0.6"/>
+  <circle cx="386" cy="200" r="3" fill="url(#gold)" opacity="0.6"/>
+</svg>
