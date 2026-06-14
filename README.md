@@ -19,8 +19,12 @@ This is a simple project created to practice web development skills and improve 
 ## 📂 Features
 - Responsive design  
 - Simple UI layout  
-- Beginner-friendly code  
+- Beginner-friendly code
+---
+## 🌐 Live Preview
 
+Click here to view the project:
+👉 https://arturyazero.github.io/aryana-cabinetry/
 ---
 And... It's my first proj!!!
 ## 👤 Author
