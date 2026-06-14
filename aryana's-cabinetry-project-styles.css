@@ -132,7 +132,6 @@ body {
     display: flex;
     animation: fadeIn 1s;
     font-size: 1.2rem;
-    margin: 0.1rem;
   }
   .burger {
     display: flex;
